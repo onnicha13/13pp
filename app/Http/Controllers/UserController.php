@@ -82,7 +82,6 @@ class UserController extends Controller
     }
     public function table_update(Request $request)
     {
-
         // dd($request);
         $update = Province::find($request->id);
         $update->province = $request->province;
