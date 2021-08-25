@@ -8,3 +8,5 @@
 <script src="{{ asset('dist/js/demo.js') }}"></script>
 <!-- overlayScrollbars -->
 <script src="{{ asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+<!-- pace-progress -->
+<script src="{{ asset('plugins/pace-progress/pace.min.js') }}"></script>

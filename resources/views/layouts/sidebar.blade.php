@@ -38,7 +38,7 @@
          </li>
 
          <li class="nav-item">
-           <a href="{{ route('home') }}" class="nav-link {{ active_route('home') }}">
+           <a href="{{ route('home2') }}" class="nav-link {{ active_route('home2') }}">
              <i class="nav-icon fas fa-home"></i>
              <p>Home<span class="badge badge-info right">2</span></p>
            </a>

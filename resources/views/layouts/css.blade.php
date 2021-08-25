@@ -6,3 +6,5 @@
   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="{{ asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+  <!-- pace-progress -->
+  <link rel="stylesheet" href="{{ asset('plugins/pace-progress/themes/blue/pace-theme-flat-top.css') }}">

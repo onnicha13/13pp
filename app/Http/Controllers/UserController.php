@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         // $msg = "Test log";
@@ -46,9 +51,9 @@ class UserController extends Controller
     }
     // -----------------------------------------------------------------------------------
 
-    public function home()
+    public function home2()
     {
-        return view('home');
+        return view('home2');
     }
     // -----------------------------------------------------------------------------------
     public function table()
