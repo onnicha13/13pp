@@ -23,6 +23,13 @@
 @endsection
 
 @section('custom-css')
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+    body {
+        font-family: 'Pattaya', sans-serif;
+    }
+</style>
 @endsection
 
 @section('content')

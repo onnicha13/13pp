@@ -8,3 +8,14 @@
   <link rel="stylesheet" href="{{ asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
   <!-- pace-progress -->
   <link rel="stylesheet" href="{{ asset('plugins/pace-progress/themes/blue/pace-theme-flat-top.css') }}">
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+    body{
+      font-family: 'Pattaya', sans-serif;
+    }
+  </style>
+
+

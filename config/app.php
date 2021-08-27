@@ -177,6 +177,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+        // Laravel\Socialite\SocialiteServiceProvider::class,
 
     ],
 
@@ -233,6 +234,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Active' => Pyaesone17\ActiveState\ActiveFacade::class,
+        // 'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

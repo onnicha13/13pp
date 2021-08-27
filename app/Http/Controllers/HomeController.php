@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\UploadFile;
+use App\Models\UploadImg;
 
 class HomeController extends Controller
 {
@@ -26,4 +28,11 @@ class HomeController extends Controller
         // return view('home');
         return redirect()->route('home2');
     }
+
+
+    public function upload_file(Request $request)
+    {
+        
+    }
+
 }

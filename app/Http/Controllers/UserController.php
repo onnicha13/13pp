@@ -9,53 +9,19 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
+    // ประกาศใช้ Auth
     public function __construct()
     {
         $this->middleware('auth');
     }
-    
-    public function index()
-    {
-        // $msg = "Test log";
-        // Log::info($msg);
-        $data = Province::orderBy('province_code', 'ASC')->take(10)->get();
 
-        return view('user.index', [
-            "data" => $data
-        ]);
-    }
-    public function insert(Request $request)
-    {
-        return redirect()->back()->with('Success', 'Insert Successfully !!');
-    }
-    public function update(Request $request)
-    {
-        return redirect()->back()->with('Update', 'Update Successfully !!');
-    }
-    public function delete(Request $request)
-    {
-        return redirect()->back()->with('Delete', 'Delete Successfully !!');
-    }
-    public function validates(Request $request)
-    {
-        $this->validate($request, [
-            'title' => 'required|unique|max:255',
-            'body' => 'required',
-        ]);
-
-        return redirect()->back();
-    }
-    public function SweetAlert2(Request $request)
-    {
-        return redirect()->back()->with('SweetAlert2', 'Successfully !!');
-    }
-    // -----------------------------------------------------------------------------------
-
+    // หน้าแรก -----------------------------------------------------------------------------------
     public function home2()
     {
         return view('home2');
     }
-    // -----------------------------------------------------------------------------------
+
+    // จังหวัด (CRUD) -----------------------------------------------------------------------------------
     public function table()
     {
         $data = Province::orderBy('id', 'DESC')->limit(10)->get();
@@ -112,15 +78,17 @@ class UserController extends Controller
     }
 
 
-    // -----------------------------------------------------------------------------------
+    // Dashboard -----------------------------------------------------------------------------------
     public function dashboard()
     {
         return view('dashboard');
     }
-    // -----------------------------------------------------------------------------------
 
+
+    // Upload File -----------------------------------------------------------------------------------
     public function form_upload()
     {
+
         return view('form_upload');
     }
     public function form_upload_insert(Request $request)
@@ -131,8 +99,9 @@ class UserController extends Controller
         ]);
         return back()->withInput()->with('Success', 'Upload Successfully');
     }
-    // -----------------------------------------------------------------------------------
 
+
+    // Upload Image -----------------------------------------------------------------------------------
     public function form_image()
     {
         return view('form_image');
@@ -145,8 +114,8 @@ class UserController extends Controller
         ]);
         return back()->withInput()->with('Success', 'Upload Successfully');
     }
-    // -----------------------------------------------------S------------------------------
 
+    // Relate Province -----------------------------------------------------S------------------------------
     public function form_relate()
     {
         return view('form_relate');
